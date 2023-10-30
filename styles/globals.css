@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Eudoxus Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Space-Mono';
+  src: url("/fonts/Space.ttf");
+}
+@font-face {
+  font-family: 'manrope';
+  src: url("/fonts/Manrope.ttf");
+}
+/* Hero Section */
+
+.nav_buttons{
+  @apply text-[14px] text-white md:text-[16px] leading-[16px] md:leading-[18px]  font-[Space-Mono];
+}
+
+.started_button{
+  @apply text-[14px] text-white md:text-[16px] leading-[16px] md:leading-[18px]  font-[Space-Mono] border border-white rounded-3xl p-2 h-fit items-center;
+
+}
+/* .buy_ticket{
+  @apply bg-[#F33288] rounded-lg uppercase pt-2 p-2  gap-2 text-white h-fit text-[12px] md:text-[14px] leading-[14px] md:leading-[16px] font-[500] font-[Integral];
+
+} */
+
+.hero-main-container{
+  background-image: url('/Hero_bg.png');
+  background-size: 100% 100% ;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    
+}
+
+
+.bg_growth{
+  background-image: url('/Grid_bg.png');
+    background-repeat: repeat;
+    min-height: 100vh;
+}
+
+.bg_growth_header{
+  background-image: url('/Grid_bg.png');
+    background-repeat: repeat;
+}
+/* .grid_container{
+  background-image: url('/hero_border.png');
+  background-size: 100% 100% ;
+   min-height: 100vh;
+   min-width: 100vw;
+} */
+.hero_header{
+  @apply text-[48px] md:text-[64px] lg:text-[72px] leading-[50px] md:leading-[70px] font-[600] lg:leading-[78px] font-[manrope] text-white
+}
+
+.hero_text{
+  @apply text-[20px] md:text-[24px] lg:text-[28px] leading-[24px] md:leading-[28px]  lg:leading-[32px]  font-[Space-Mono] text-[#9D9595];
+
+}
+
+.scroll-section-outer {
+  overflow: hidden;
+}
+
+.scroll-section-inner {
+  height: 50vh;
+  min-width: 600vw;
+  display: flex;
+  flex-direction: row; 
+  justify-content: start;
+}
+
+.scroll-section {
+  height: 60vh;
+  min-width: 100vw;
+ 
+}
+
+.section_service_header{
+  @apply text-[48px] md:text-[64px] lg:text-[72px] leading-[50px] font-[100] text-center  lg:leading-[78px] uppercase font-[manrope] text-white
+
+}
+
+.count_text{
+  @apply text-[20px] md:text-[24px] lg:text-[26px] leading-[24px] md:leading-[28px]  lg:leading-[32px] text-center font-[manrope] text-[#fff];
+
+}
+
+.header_text_service{
+  @apply text-[24px] md:text-[32px] lg:text-[36px] leading-[28px] md:leading-[34px]  lg:leading-[38px] text-center  font-[manrope] text-[#fff] font-[800];
+
+}
+
+.description_text_service{
+  @apply text-[16px] md:text-[20px] lg:text-[24px] leading-[20px] md:leading-[24px]  lg:leading-[28px]  font-[manrope] text-[#E1DAD4] ;
+
+}
+
+.hr_line_question{
+  @apply border border-b border-[#0618DD]
+}
+
+.question_text{
+  @apply text-[16px] md:text-[20px]  leading-[20px] md:leading-[24px]  lg:leading-[28px]  font-[manrope] text-[#0618DD] ;
+
+}
+
+.answer_text{
+  @apply text-[16px] md:text-[20px] lg:text-[18px] leading-[20px] md:leading-[24px]  lg:leading-[28px]  font-[manrope] text-[#0618DD] ;
+
+}
+
+.faq_header{
+  @apply text-[48px] md:text-[64px] lg:text-[72px] leading-[50px] font-[100]   lg:leading-[78px] uppercase font-[manrope] text-[#0618DD];
+
+}
+
+.calender_header{
+  @apply text-[48px] md:text-[64px] lg:text-[48px] leading-[50px] font-[100] text-center  lg:leading-[78px]  font-[manrope] text-[#0618DD];
+  
+}
+
+.footer_header{
+  @apply text-[240px] md:text-[280px] lg:text-[320px] font-[900]  font-[manrope] text-[#0618DD];
+
+}
+
+.footer_button{
+  @apply text-[16px] md:text-[18px] lg:text-[20px] leading-[18px] md:leading-[20px]  font-[900] lg:leading-[23px]  font-[manrope] text-[#0618DD] ;
+
+}
+
+.footer_text{
+  @apply text-[14px] md:text-[16px] lg:text-[16px] leading-[18px] md:leading-[20px] font-[900]  font-[manrope] text-[#0618DD] ;
+
+}
+
+.service_count{
+  @apply text-[20px] md:text-[24px] lg:text-[26px] leading-[24px] md:leading-[28px]  font-[900] lg:leading-[30px]  font-[Space-Mono] text-[#E41C1C] ;
+
+}
+
+.service_text{
+  @apply text-[20px] md:text-[24px] lg:text-[26px] leading-[24px] md:leading-[28px]  font-[900] lg:leading-[30px]  font-[Space-Mono] text-[#0618DD] ;
+
+}
