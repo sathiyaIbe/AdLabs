@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use client';
 
 import AccordItem from "../components/Js/AccordItem";
