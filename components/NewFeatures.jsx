@@ -1,3 +1,4 @@
+/* eslint-disable */
 const NewFeatures = () => (
   <div>
     New Features

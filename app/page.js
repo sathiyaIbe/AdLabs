@@ -1,5 +1,5 @@
 import { Footer, Navbar } from '../components';
-import { Service, Explore, Feedback, GetStarted, Hero, Insights, WhatsNew, World } from '../sections';
+import { Service, Explore, Feedback,  Hero, Insights } from '../sections';
 
 const Page = () => (
   <div>
