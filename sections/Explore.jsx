@@ -74,7 +74,10 @@ const Explore = () =>{
   }, []);
   document.addEventListener('scroll', () => {
   
-
+    if(typeof window !== 'undefined')
+    {
+    return// Your client-side code that uses window goes here
+    }
     
     var wScroll = window.scrollY;
     console.log(wScroll)
