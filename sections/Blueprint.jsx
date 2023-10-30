@@ -72,26 +72,25 @@ const Blueprint = () =>{
 
 
 
-  document.addEventListener('scroll', () => {
+//   document.addEventListener('scroll', () => {
 
-    console.log(wScroll)
-if(wScroll<6500 ){
-  SetActiveEl('first')
+// if(wScroll<6500 ){
+//   SetActiveEl('first')
 
-} else if( wScroll<7200 ){
-SetActiveEl('second')
-    }else if( wScroll<7700){
-SetActiveEl('third')
-    }
-    else if( wScroll<8400){
-      SetActiveEl('fourth')
-          }
-          else if(wScroll>9100){
-            SetActiveEl('fifth')
-                }
+// } else if( wScroll<7000 ){
+// SetActiveEl('second')
+//     }else if( wScroll<7600){
+// SetActiveEl('third')
+//     }
+//     else if( wScroll<8200){
+//       SetActiveEl('fourth')
+//           }
+//           else if(wScroll>8800){
+//             SetActiveEl('fifth')
+//                 }
     
-  }
-  );
+//   }
+//   );
 
 
  return(
