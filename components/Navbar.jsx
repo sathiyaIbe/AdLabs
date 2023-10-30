@@ -2,6 +2,7 @@
 'use client';
 
 import Link from "next/link";
+import { Service } from "../sections";
 
 const Navbar = () => (
   <nav className="">
@@ -12,7 +13,7 @@ const Navbar = () => (
       <img src='/main_logo.svg' className="w-2/3" alt='logo'/>
       </button>
       <div className="flex gap-11 self-center">
-        <Link href='#Service' className="nav_buttons" type="button">Our Services</Link>
+        <a href='#Service' className="nav_buttons" type="button">Our Services</a>
         <button className="nav_buttons" type="button">The Growth Blueprint</button>
         <button className="nav_buttons" type="button">FAQ</button>
 
@@ -24,6 +25,10 @@ Get Started
 </button>
     </div>
     </div>
+    {/* <section id='Service'>
+      <Service />
+    </section> */}
+    
   </nav>
 );
 

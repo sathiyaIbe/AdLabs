@@ -72,29 +72,29 @@ const Explore = () =>{
       pin.kill();
     };
   }, []);
-//   window.addEventListener('scroll', () => {
+  document.addEventListener('scroll', () => {
   
 
     
-//     var wScroll = window.scrollY;
-//     console.log(wScroll)
-// if(wScroll<12000 ){
-//   SetActiveEl('first')
+    var wScroll = window.scrollY;
+    console.log(wScroll)
+if(wScroll<12000 ){
+  SetActiveEl('first')
 
-// } else if(wScroll>12000 && wScroll<12800 ){
-// SetActiveEl('second')
-//     }else if(wScroll>12800 && wScroll<13600){
-// SetActiveEl('third')
-//     }
-//     else if(wScroll>13600 && wScroll<14400){
-//       SetActiveEl('fourth')
-//           }
-//           else if(wScroll>14400){
-//             SetActiveEl('fifth')
-//                 }
+} else if(wScroll>12000 && wScroll<12800 ){
+SetActiveEl('second')
+    }else if(wScroll>12800 && wScroll<13600){
+SetActiveEl('third')
+    }
+    else if(wScroll>13600 && wScroll<14400){
+      SetActiveEl('fourth')
+          }
+          else if(wScroll>14400){
+            SetActiveEl('fifth')
+                }
     
-//   }
-//   );
+  }
+  );
 
  return(
   <section className="overflow-hidden min-h-[100vh] bg_growth ">
