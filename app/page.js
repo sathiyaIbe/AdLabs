@@ -1,20 +1,15 @@
 import { Footer, Navbar } from '../components';
-import { Service, Explore, Feedback,  Hero, Insights } from '../sections';
+import { Service, Blueprint, Feedback,  Hero, Contact } from '../sections';
 
 const Page = () => (
   <div>
     <Hero />
     <Service />
-   <Explore />
-   <Feedback />
-   <Insights />
-   <Footer />
-     {/* <GetStarted />
-    <WhatsNew />
-    <World />
-    
+    <Blueprint />
     <Feedback />
-    <Footer /> */}
+    <Contact />
+    <Footer />
+     
   </div>
 );
 

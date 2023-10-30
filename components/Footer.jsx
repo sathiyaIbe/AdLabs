@@ -11,10 +11,10 @@ const Footer = () => (
 
 </div>
 <div className="self-center flex gap-6">
-  <button className="footer_button">Who we are</button>
-  <button className="footer_button">What we do</button>
-  <button className="footer_button">FAQ</button>
-  <button className="footer_button">Grow with us</button>
+  <a href='#Main' className="footer_button">Who we are</a>
+  <a href='#Services' className="footer_button">What we do</a>
+  <a href='FAQ' className="footer_button">FAQ</a>
+  <a href='Contact' className="footer_button">Grow with us</a>
 
 
 </div>

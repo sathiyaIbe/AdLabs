@@ -3,27 +3,24 @@
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+import Lenis from '@studio-freight/lenis'
 import { useEffect, useRef, useState } from "react";
-const Explore = () =>{
+import { useScrollYPosition } from "react-use-scroll-position";
+const Blueprint = () =>{
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
   const [activeEl,SetActiveEl]=useState('')
+  const wScroll = useScrollYPosition();
   useEffect(() => {
     const sections = gsap.utils.toArray(".scroll-section");
     const pin = gsap.to(
       sections,
       {
-        xPercent:-100*(sections.length-1),
-        ease: "none",
-        duration: 2,
+
         scrollTrigger: {
           trigger: triggerRef.current,
           pin:true,
-          end: "+=5000",
-          scrub: 1,
-          pin: true,
-          
-          repeat:-1, 
+          end: "+=3000",
         },
 
       }
@@ -72,43 +69,41 @@ const Explore = () =>{
       pin.kill();
     };
   }, []);
+
+
+
   document.addEventListener('scroll', () => {
-  
-    if(typeof window !== 'undefined')
-    {
-    return// Your client-side code that uses window goes here
-    }
-    
-    var wScroll = window.scrollY;
+
     console.log(wScroll)
-if(wScroll<12000 ){
+if(wScroll<6500 ){
   SetActiveEl('first')
 
-} else if(wScroll>12000 && wScroll<12800 ){
+} else if( wScroll<7200 ){
 SetActiveEl('second')
-    }else if(wScroll>12800 && wScroll<13600){
+    }else if( wScroll<7700){
 SetActiveEl('third')
     }
-    else if(wScroll>13600 && wScroll<14400){
+    else if( wScroll<8400){
       SetActiveEl('fourth')
           }
-          else if(wScroll>14400){
+          else if(wScroll>9100){
             SetActiveEl('fifth')
                 }
     
   }
   );
 
+
  return(
-  <section className="overflow-hidden min-h-[100vh] bg_growth ">
-     <div className=" pt-11 pb-11 bg_growth_header">
-   <h1 className="section_service_header  text-[#000]">THE GROWTH blueprint</h1>
+  <section id='Growth' ref={triggerRef} className="overflow-hidden min-h-[100vh] bg_growth ">
+     <div className=" pt-6 pb-6   ">
+   <h1 className="section_service_header    text-[#000]">THE GROWTH blueprint</h1>
   
    </div>
-  <div ref={triggerRef} className="flex flex-col bg_growth gap-11  ">
+  <div  className="flex flex-col  gap-6  ">
    
-   <div className="grid_containe max-w-[100vw]   flex flex-col justify-between  ">
-    <div className=" flex flex-col w-[80%]  self-center">
+   <div className="grid_containe   flex flex-col justify-between  ">
+    <div className=" flex flex-col w-[50%]  self-center">
     <img src='/grid_hor.svg' alt='grid'/>
     <div className="flex ">
       <div className="min-w-[20%]">
@@ -223,4 +218,4 @@ SetActiveEl('third')
   </section>
 );
  }
-export default Explore;
+export default Blueprint;

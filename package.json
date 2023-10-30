@@ -9,13 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.27",
     "eslint-config-next": "13.0.3",
     "framer-motion": "^7.10.3",
     "gsap": "^3.12.2",
     "next": "13.0.3",
     "react": "18.2.0",
     "react-calendly": "^4.3.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-use-scroll-position": "^2.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

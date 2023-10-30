@@ -1,16 +1,16 @@
 import Hero from './Hero';
 import Service from './Service';
-import Explore from './Explore';
+import Blueprint from './Blueprint';
 // import GetStarted from './GetStarted';
 // import WhatsNew from './WhatsNew';
 // import World from './World';
-import Insights from './Insights';
-import Feedback from './Feedback';
+import Contact from './Contact';
+import Feedback from './Faq';
 
 export {
   Hero,
   Service,
-  Explore,
-  Insights,
+  Blueprint,
+  Contact,
   Feedback,
 };

@@ -14,15 +14,15 @@ const Navbar = () => (
       </button>
       <div className="flex gap-11 self-center">
         <a href='#Service' className="nav_buttons" type="button">Our Services</a>
-        <button className="nav_buttons" type="button">The Growth Blueprint</button>
-        <button className="nav_buttons" type="button">FAQ</button>
+        <a href='#Growth' className="nav_buttons" type="button">The Growth Blueprint</a>
+        <a href="#FAQ" className="nav_buttons" type="button">FAQ</a>
 
       </div>
       <div className="self-center">
-<button className="started_button" type="button">
+<a href="#Contact" className="started_button" type="button">
 
 Get Started
-</button>
+</a>
     </div>
     </div>
     {/* <section id='Service'>

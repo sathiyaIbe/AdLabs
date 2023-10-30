@@ -3,8 +3,8 @@
 
 import AccordItem from "../components/Js/AccordItem";
 
-const Feedback = () => (
-  <section className="  flex flex-col pb-11">
+const Faq = () => (
+  <section id='FAQ' className="  flex flex-col pb-11">
     <div className="w-[90%] self-center">
     <h1 className="faq_header md:w-[50%] mt-11 mb-11">Frequently
 asked questions</h1>
@@ -20,4 +20,4 @@ asked questions</h1>
   </section>
 );
 
-export default Feedback;
+export default Faq;

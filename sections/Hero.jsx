@@ -2,7 +2,7 @@
 'use client';
 import Navbar from '../components/Navbar'
 const Hero = () => (
-  <section className="hero-main-container  bg-black">
+  <section id='Main' className="hero-main-container  bg-black">
     <div className='flex justify-center ' >
       <div className=' flex flex-col justify-between w-[92%]  h-[100%]'>
       <div className="min-h-[20vh] flex flex-col justify-center">
