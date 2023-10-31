@@ -57,67 +57,83 @@ const Service = () => {
          scrub:1,
          pin:true,
 
-      }).to(".marker13 img", {
-        
+      })
+      gsap.timeline({
         scrollTrigger: {
-          trigger: ".marker13 img",
+          trigger:'.marker13 img',
           containerAnimation: pin,
-          start: clamp("center 50%"),
-          end:clamp('center 25%'),
-          scrub: 0.1,
-       
-        },
-        delay:2,
-        rotation:120,
-        repeat:1,
-        repeatDelay:2,
-        yoyo:true,
-        ease: "none",
-      }).to(".marker14 img", {
-        scrollTrigger: {
-          trigger: ".marker14 img",
-          containerAnimation: pin,
-          start: clamp("center 50%"),
-          end:clamp('center 25%'),
-          scrub: 0.1,
-        },
-        delay:2,
-        rotation:120,
-        repeat:1,
-        repeatDelay:2,
-        yoyo:true,
-        ease: "none",
-        
-      }).to(".marker15 img", {
-        scrollTrigger: {
-          trigger: ".marker15 img",
-          containerAnimation: pin,
-          start: clamp("center 50%"),
-          end:clamp('center 25%'),
-          scrub: 0.1,
-         
-        },
-        delay:2,
-        rotation:120,
-        repeat:1,
-        repeatDelay:2,
-        yoyo:true,
-        ease: "none",
-      }).to(".marker16 img", {
-        scrollTrigger: {
-          trigger: ".marker16 img",
-          containerAnimation: pin,
-          start: clamp("center 50%"),
-          end:clamp('center 25%'),
           scrub: 0.1,
 
-        },
-        delay:2,
-        rotation:120,
-        repeat:1,
-        repeatDelay:2,
-        yoyo:true,
-        ease: "none",
+          start: "top 50%",
+          end:'bottom 25%',
+        }
+      }) .to(".marker13 img", {
+        rotation: 120,
+        duration: 5,
+        ease: 'none',
+        repeat:1, repeatDelay:0.1,
+         yoyo:true,
+         timeScale: 0,
+         scrub:1,
+         pin:true,
+      })
+      gsap.timeline({
+        scrollTrigger: {
+          trigger:'.marker14 img',
+          containerAnimation: pin,
+          scrub: 0.1,
+
+          start: "top 50%",
+          end:'bottom 25%',
+        }
+      })
+      .to(".marker14 img", {
+        rotation: 120,
+        duration: 5,
+        ease: 'none',
+        repeat:1, repeatDelay:0.1,
+         yoyo:true,
+         timeScale: 0,
+         scrub:1,
+         pin:true,
+      })
+      gsap.timeline({
+        scrollTrigger: {
+          trigger:'.marker15 img',
+          containerAnimation: pin,
+          scrub: 0.1,
+
+          start: "top 50%",
+          end:'bottom 25%',
+        }
+      }).to(".marker15 img", {
+        rotation: 120,
+        duration: 5,
+        ease: 'none',
+        repeat:1, repeatDelay:0.1,
+         yoyo:true,
+         timeScale: 0,
+         scrub:1,
+         pin:true,
+      })
+      gsap.timeline({
+        scrollTrigger: {
+          trigger:'.marker16 img',
+          containerAnimation: pin,
+          scrub: 0.1,
+
+          start: "top 50%",
+          end:'bottom 25%',
+        }
+      }).to(".marker16 img", {
+        rotation: 120,
+        duration: 5,
+        ease: 'none',
+        repeat:1, repeatDelay:0.1,
+         yoyo:true,
+         timeScale: 0,
+         scrub:1,
+         pin:true,
       });
 
 
