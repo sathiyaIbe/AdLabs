@@ -1,10 +1,11 @@
 /* eslint-disable */
 'use client';
-import { gsap } from "gsap";
+import {  gsap } from "gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Timeline } from "gsap/gsap-core";
+import { clamp } from "gsap/gsap-core";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,14 +14,7 @@ const Service = () => {
   const triggerRef = useRef(null);
   useEffect(() => {
 
-//     gsap.fromTo("#Water",{
-//       y: 150,
-//       opacity:0
-// }, {
-//   duration: 4,
-//   opacity:1,
-//   y: 0
-//     })
+
 
     const sections = gsap.utils.toArray(".scroll-section");
     const pin = gsap.to(
@@ -29,290 +23,111 @@ const Service = () => {
         xPercent:-100*(sections.length-1),
         ease: "none",
         duration: 2,
+
         scrollTrigger: {
           trigger: triggerRef.current,
           pin:true,
           end: "+=5000",
-          scrub: 1,
-          pin: true,
-          // snap: 1 / (sections.length - 1),
-         
+          scrub: 2,
         },
 
       }
     );
-    // sections.forEach((section) => {
-    //   // grab the scoped text
-    //   let text =  gsap.utils.toArray(".scroll-section img");
-      
-    //   // bump out if there's no items to animate
-    //   console.log(text)
-    //   if(text.length === 0)  return 
-      
-    //   // do a little stagger
-    //   gsap.to(text, {
-    //     xPercent:40,
-    //     rotation: 120,
-    //     opacity: 1,
-    //     duration: 1,
-    //     ease: "none",
-    //     yoyo:true,
-    //     repeat:1,
-    //     repeatDelay: 1,
-    //     scrollTrigger: {
-    //       trigger: section,
-    //       containerAnimation: pin,
-    //       start: "right end",
-    //       onEnter: () => console.log(text.length)
-          
-    //     }
-    //   });
-    // })
-    sections.forEach((section) => {
 
-      })
-
-      gsap.to(".marker12 img", {
-        rotation:120,
-        delay:5,
-        repeatDelay:5,
-        repeat:1,
-        yoyo:true,
-       duration:5,
-        ease: "ease-out",
+     gsap.timeline({
         scrollTrigger: {
-          trigger: ".marker12 img",
+          trigger:'.marker12 img',
           containerAnimation: pin,
-          start: "center 40%",
-          end: "center 30%",
-          duration:5,
-         
-          
-         
-          scrub: true,
-          id: "1"
+          scrub: 0.1,
+
+          start: "top 50%",
+          end:'bottom 25%',
         }
-      });
-      gsap.to(".marker13 img", {
-        rotation:120,
-        delay:5,
-        repeatDelay:5,
+      }).to('.marker12 img', {
+
+        rotation: 120,
+        duration: 5,
+        ease: 'none',
         repeat:1,
-        yoyo:true,
-       duration:5,
-        ease: "ease-out",
+
+
+        repeatDelay:0.1,
+         yoyo:true,
+         timeScale: 0,
+         scrub:1,
+         pin:true,
+
+      }).to(".marker13 img", {
+        
         scrollTrigger: {
           trigger: ".marker13 img",
           containerAnimation: pin,
-          start: "center 40%",
-          end: "center 30%",
-          duration:5,
-         
-          
-         
-          scrub: true,
-          id: "1"
-        }
-      });
-      gsap.to(".marker14 img", {
+          start: clamp("center 50%"),
+          end:clamp('center 25%'),
+          scrub: 0.1,
+       
+        },
+        delay:2,
         rotation:120,
-        delay:5,
-        repeatDelay:5,
         repeat:1,
+        repeatDelay:2,
         yoyo:true,
-       duration:5,
-        ease: "ease-out",
+        ease: "none",
+      }).to(".marker14 img", {
         scrollTrigger: {
           trigger: ".marker14 img",
           containerAnimation: pin,
-          start: "center 40%",
-          end: "center 30%",
-          duration:5,
-         
-          
-         
-          scrub: true,
-          id: "1"
-        }
-      });
-      gsap.to(".marker15 img", {
+          start: clamp("center 50%"),
+          end:clamp('center 25%'),
+          scrub: 0.1,
+        },
+        delay:2,
         rotation:120,
-        delay:5,
-        repeatDelay:5,
         repeat:1,
+        repeatDelay:2,
         yoyo:true,
-       duration:5,
-        ease: "ease-out",
+        ease: "none",
+        
+      }).to(".marker15 img", {
         scrollTrigger: {
           trigger: ".marker15 img",
           containerAnimation: pin,
-          start: "center 40%",
-          end: "center 30%",
-          duration:5,
+          start: clamp("center 50%"),
+          end:clamp('center 25%'),
+          scrub: 0.1,
          
-          
-         
-          scrub: true,
-          id: "1"
-        }
-      });
-      gsap.to(".marker16 img", {
+        },
+        delay:2,
         rotation:120,
-        delay:5,
-        repeatDelay:5,
         repeat:1,
+        repeatDelay:2,
         yoyo:true,
-       duration:5,
-        ease: "ease-out",
+        ease: "none",
+      }).to(".marker16 img", {
         scrollTrigger: {
           trigger: ".marker16 img",
           containerAnimation: pin,
-          start: "center 40%",
-          end: "center 30%",
-          duration:5,
-         
-          
-         
-          scrub: true,
-          id: "1"
-        }
+          start: clamp("center 50%"),
+          end:clamp('center 25%'),
+          scrub: 0.1,
+
+        },
+        delay:2,
+        rotation:120,
+        repeat:1,
+        repeatDelay:2,
+        yoyo:true,
+        ease: "none",
       });
 
 
 
 
-      // ScrollTrigger.create({
-        
-      //   containerAnimation: pin,
-      //   trigger: section,
-        
-      //   onEnter: () => {
-      //     gsap.to(section, {
-      //         xPercent:40,
-      //         rotation: 120,
-      //         opacity: 1,
-      //         duration: 1,
-      //         ease: "none",
-      //         yoyo:true,
-      //         repeat:1,
-      //         repeatDelay: 1,
-      //         scrollTrigger: {
-      //           trigger: sections,
-      //           containerAnimation: pin,
-      //           start: "right end",
-      //           onLeaveBack: () =>{
-      //             gsap.to(section, {
-      //                 xPercent:40,
-      //                 rotation: 120,
-      //                 opacity: 1,
-      //                 duration: 1,
-      //                 ease: "none",
-      //                 yoyo:true,
-      //                 repeat:1,
-      //                 repeatDelay: 1,
-      //                 scrollTrigger: {
-      //                   trigger: sections,
-      //                   containerAnimation: pin,
-      //                   start: "right end",
-                      
-                        
-      //                 }
-      //               });
-      //           },
-                
-      //         }
-      //       });
-      //   },
-      //   onLeave: () =>{
-      //     gsap.to('.marker1 img', {
-      //         xPercent:40,
-      //         rotation: 120,
-      //         opacity: 1,
-      //         duration: 1,
-      //         ease: "none",
-      //         yoyo:true,
-      //         repeat:1,
-      //         repeatDelay: 1,
-      //         scrollTrigger: {
-      //           trigger: sections,
-      //           containerAnimation: pin,
-              
-                
-      //         }
-      //       });
-      //     }
-      //   })
-
-//         // onSnapComplete: () => {
-//         //   gsap.to(".marker1 img", {
-//         //       xPercent:40,
-//         //       rotation: 120,
-//         //       opacity: 1,
-//         //       duration: 1,
-//         //       ease: "none",
-//         //       yoyo:true,
-//         //       repeat:1,
-//         //       repeatDelay: 1,
-//         //       scrollTrigger: {
-//         //         trigger: sections,
-//         //         containerAnimation: pin,
-//         //         start: "right end",
-                
-                
-//         //       }
-//         //     });
-//         // },
-       
-//       });
-//       // ScrollTrigger.create({
-        
-//       //   containerAnimation: pin,
-//       //   trigger: ".marker2",
-        
-//       //   onEnter: () => {
-//       //     gsap.to('.marker2 img', {
-//       //       xPercent:40,
-//       //       rotation: 120,
-//       //       opacity: 1,
-//       //       duration: 1,
-//       //       ease: "none",
-//       //       yoyo:true,
-//       //       repeat:1,
-//       //       repeatDelay: 1,
-//       //       scrollTrigger: {
-//       //         trigger: section,
-//       //         containerAnimation: pin,
-//       //         start: "right start",
-//       //         onEnter: () => console.log(text.length)
-              
-//       //       }
-//       //     });
-//       //   },
-//       //   onLeaveBack: () => console.log('bbbb'),
-       
-//       // });
-      
-     
-
-// function reverse(){
-
-// }
     return () => {
       {/* A return function for killing the animation on component unmount */ }
       pin.kill();
     };
 
-// const tl=gsap.timeline({
-//   scrollTrigger:{
-//     trigger:sectionRef.current,
-//     pin:true,
-//   start:'top 20%',
-//   end:'top 80%',
-//     scrub:1,
-//   }
-// })
-// tl.to(sectionRef.current,{x:-20,duration:5})
-// .to(sectionRef.current,{x:-20,duration:5})
 
   }, []);
 
@@ -341,16 +156,16 @@ function rotateFunction(e){
 
       {/* The div below act just as a trigger. As the doc suggests, the trigger and 
       the animation should alway be two separated refs */}
-      <div ref={triggerRef}>
+      <div id='smooth_content' ref={triggerRef}>
               {/* <h1 className="service_header">Our services</h1> */}
 
         <div  className="scroll-section-inner">
-        {/* <div className="scroll-section">
+        <div className="scroll-section">
            
-          </div> */}
-          <div className="scroll-section  flex flex-col mt-11"></div>
+          </div>
+          <div className="scroll-section1  flex flex-col mt-11"></div>
           <div   className="scroll-section marker12  flex flex-col mt-11">
-            <div className="self-center w-[60%] flex">
+            <div className="self-end w-[60%] flex">
             <div className="flex flex-col justify-center text-right  gap-3 pr-11">
             <p className="service_count">01</p>
             <p className="service_text"> Meta</p>
@@ -361,7 +176,7 @@ function rotateFunction(e){
             </div>
           </div>
           <div className="scroll-section marker13 flex flex-col mt-11">
-            <div className="self-center w-[60%] flex">
+            <div className="self-end w-[60%] flex">
             <div className="flex flex-col justify-center text-right gap-3 pr-11">
             <p className="service_count">02</p>
             <p className="service_text"> Creative</p>
