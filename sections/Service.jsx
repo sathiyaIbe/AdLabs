@@ -43,10 +43,13 @@ const Service = () => {
           scrub: 0.1,
           onUpdate: self => {self.progress>0.5&&gsap.to("#Water", {
             attr: { d:shape2, },
+            y:0,
+            opacity:1,
             duration:2,
             ease:'elastic',
         }),self.progress<0.5&&self.direction===-1 &&gsap.to("#Water", {
-          attr: { d:emptyShape, },
+          y:-100,
+          opacity:0,
           duration:2,
           ease:'elastic',
       })},          
@@ -74,14 +77,16 @@ const Service = () => {
           scrub: 0.1,
           onUpdate: self => {self.progress>0.5&&gsap.to("#Water1", {
             attr: { d:shape3, },
+            opacity:1,
+            y:0,
             duration:2,
             ease:'elastic',
         }),self.progress<0.5&&self.direction===-1 &&gsap.to("#Water1", {
-          attr: { d:emptyShape, },
+         opacity:0,
+         y:-100,
           duration:2,
           ease:'elastic',
       })},
-          markers:true,
           start: "top 50%",
           end:'bottom 25%',
         }
@@ -104,10 +109,13 @@ const Service = () => {
           scrub: 0.1,
           onUpdate: self => {self.progress>0.5&&gsap.to("#Water2", {
             attr: { d:shape4, },
+            opacity:1,
+            y:0,
             duration:2,
             ease:'elastic',
         }),self.progress<0.5&&self.direction===-1 &&gsap.to("#Water2", {
-          attr: { d:emptyShape, },
+                   opacity:0,
+         y:-100,
           duration:2,
           ease:'elastic',
       })},  
@@ -132,10 +140,13 @@ const Service = () => {
           scrub: 0.1,
           onUpdate: self => {self.progress>0.5&&gsap.to("#Water3", {
             attr: { d:shape5, },
+            opacity:1,
+            y:0,
             duration:2,
             ease:'elastic',
         }),self.progress<0.5&&self.direction===-1 &&gsap.to("#Water3", {
-          attr: { d:emptyShape, },
+                   opacity:0,
+         y:-100,
           duration:2,
           ease:'elastic',
       })},          
@@ -159,10 +170,13 @@ const Service = () => {
           scrub: 0.1,
           onUpdate: self => {self.progress>0.5&&gsap.to("#Water4", {
             attr: { d:shape6, },
+            opacity:1,
+            y:0,
             duration:2,
             ease:'elastic',
         }),self.progress<0.5&&self.direction===-1 &&gsap.to("#Water4", {
-          attr: { d:emptyShape, },
+                   opacity:0,
+         y:-100,
           duration:2,
           ease:'elastic',
       })},          
